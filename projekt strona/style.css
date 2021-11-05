@@ -1,0 +1,438 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: rgb(202, 202, 202); */
+  font-family: "Mulish", sans-serif;
+  /* font-family: "Varela Round", sans-serif; */
+}
+@import url(https://pl.allfont.net/allfont.css?fonts=comic-sans-ms);
+body {
+  width: 99vw;
+  height: 150vh;
+  z-index: 0;
+}
+
+.container {
+  width: 99vw;
+  height: 150vh;
+}
+
+header {
+  width: 99vw;
+  height: 15vh;
+}
+
+.lista {
+  background-color: rgba(255, 163, 42, 0.945);
+}
+
+.lista a {
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.listaitem {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  float: left;
+  width: 10vw;
+  padding: 20px;
+  margin: 20px;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: gray;
+  color: orange;
+  font-weight: bold;
+  border: black 2px solid;
+  border-radius: 5px;
+}
+
+#wyszukiwanie {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: red;
+  background-color: yellow;
+  /* background-image: url("images/arrow.png") repea; */
+  border: black solid 2px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+option {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: dodgerblue;
+  color: black;
+  font-weight: inherit;
+  text-align: center;
+}
+
+/* .moreinfo{
+  right:0;
+  top:0;
+} */
+
+/* .custom-select {
+  width: 200px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: dodgerblue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: dodgerblue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+} */
+
+#wyszukaj {
+  background-color: yellow;
+  color: orange;
+  border: black solid 2px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+#main {
+  display: none;
+  flex-direction: column;
+  width: 70vw;
+  height: 100%;
+  margin-top: 5vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  border: black solid 2px;
+  border-radius: 10px;
+}
+
+.pokaz {
+  height: 100%;
+  width: 99%;
+  margin: 5px;
+  border: black solid 1px;
+  border-radius: 2px;
+}
+
+footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+}
+.moreinfo {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+.moreinfoshow {
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(31, 31, 31, 0.9);
+  margin-left: 15%;
+  width: 70%;
+  height: 90vh;
+  color: rgb(0, 0, 0);
+  top: 5%;
+  border: black solid 2px;
+  border-radius: 30px;
+}
+.informacje {
+  display: block;
+  margin-left: 210px;
+  font-size: 16px;
+}
+.informacje-tytul {
+  display: block;
+  margin-left: 210px;
+  font-weight: bold;
+  font-size: 18px;
+}
+#showmoreinfo0 {
+  display: none;
+}
+#showmoreinfo1 {
+  display: none;
+}
+#showmoreinfo2 {
+  display: none;
+}
+#showmoreinfo3 {
+  display: none;
+}
+#showmoreinfo4 {
+  display: none;
+}
+#showmoreinfo5 {
+  display: none;
+}
+#showmoreinfo6 {
+  display: none;
+}
+#showmoreinfo7 {
+  display: none;
+}
+#showmoreinfo8 {
+  display: none;
+}
+#showmoreinfo9 {
+  display: none;
+}
+#miks0 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks1 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks2 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks3 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks4 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks5 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks6 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks7 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks8 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+#miks9 {
+  display: flex;
+  position: fixed;
+  top: 6%;
+  right: 16%;
+}
+.posters {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+.tlo {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.wiecejinfo-tytul {
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  margin-left: 1%;
+}
+.informacje-wiecej {
+  color: white;
+  font-size: 16px;
+}
+.informacje-typ {
+  font-weight: bold;
+  color: lightgray;
+  margin-left: 1%;
+  float: left;
+}
+.informacje-rok {
+  display:flex;
+  color: white;
+  float: left;
+}
+.informacje-czas {
+  display:flex;
+  color: white;
+  float: left;
+}
+.informacje-pegi {
+  display:flex;
+  color: white;
+  float: right;
+  margin-right: 20px;
+}
+.informacje-rating {
+  display:flex;
+  color: white;
+  float: right;
+  margin-right: 20px;
+}
+.informacje-plot {
+  display:flex;
+  color: white;
+  margin-top:5%;
+  width:30vw;
+}
+.informacje-gatunek {
+  display:flex;
+  color: white;
+  clear:both;
+}
+.informacje-rezyser{
+  display:flex;
+  color:white;
+  clear:both;
+}
+.informacje-writers{
+  display:flex;
+  color:white;
+  clear:both;
+}
+.informacje-aktorzy{
+  display:flex;
+  color:white;
+  clear:both;
+}
+.informacje-premiera{
+  display:flex;
+  color:white;
+  clear:both;
+  margin-top:30%;
+}
+.informacje-kraj{
+  display:flex;
+  color:white;
+  clear:both;
+}
+.informacje-boxoffice{
+  display:flex;
+  color:white;
+  clear:both;
+}
+.informacje-imdblink{
+  display:flex;
+  position:fixed;
+  bottom:6%;
+  right:16%;
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.informacje-info{
+  width:50vw;
+  float:left;
+  margin-left:1%
+}
+.informacje-gora{
+
+}
+.informacje-poster{
+  height:362,5px;
+  width:250px;
+  float:left;
+  margin-top:10px;
+}
+.informacje-crew{
+  width:50vw;
+  float:left;
+  margin-bottom:10px;
+}
+.crewline{
+  width:20vw;
+  float:left;
+  margin-top:1%;
+  margin-bottom:1%;
+  margin-left:3%;
+}
